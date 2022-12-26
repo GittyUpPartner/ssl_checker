@@ -1,0 +1,12 @@
+{
+  "version": "2.0",
+  "routeKey": "POST /ssl_checkerino/post_ssl",
+  "rawPath": "/ssl_checkerino/post_ssl",
+  "rawQueryString": "host=expired.badssl.com",
+  "headers": {
+    "accept": "*/*"
+  },
+  "queryStringParameters": {
+    "host": "expired.badssl.com"
+  }
+}
