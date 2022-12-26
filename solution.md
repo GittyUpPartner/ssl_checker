@@ -104,6 +104,7 @@ To invoke from Postman:
 
 While this impementation works, there's always room for improvement, and this case is no exception. I have several potential improvements I'd like to make:
 
+* It's possible to update the python script via terraform, which would remove at least one of the final tweak steps where you swap in the snsArn.
 * If the use case is to check known sites for SSL certificates, invoking manually takes more time than regularly scheduled automation. I'd recommend a daily or at least weekly check against a list of known sites that should be checked, removing that manual need.
 * If the use case is to take action, we would probably want to be notified BEFORE expiration, but not every single day (and not every single request -- it's why I didn't notify email on positive results). To accomplish this, I'd suggest additional script logic that identifies a threshold...maybe < 14 days to expiration?
   * To take the above example further, it would be good to escalate the alerts as we get closer to 0 days.
