@@ -65,7 +65,6 @@ def ssl_checkerino(event, context):
         else:
             # just in case something else weird happened, we want to trap for that as well, and tell the requestor what the error was.
             client = boto3.client('sns')
-            snsArn = 'your_snsArn'
             message = "Some uncaught exception occurred with the SSL checker."
             response = client.publish(
                 TopicArn = snsArn,
