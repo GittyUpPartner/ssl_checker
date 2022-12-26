@@ -2,6 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
+# define some variables first
 variable "lambda_function" {
   default = "ssl_checkerino_iac"
 }
@@ -9,6 +10,7 @@ variable "myregion" {
     default = "us-east-1"
 }
 
+# user-prompting variables
 variable "accountId" {}
 
 variable "email_var" {}
